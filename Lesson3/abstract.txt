@@ -1,1 +1,57 @@
+Урок #3
+Условные операторы if -> else if -> else
+Операторы выбора switch case
+1-------------------------------------------------------
+void setup()
+{
+  Serial.begin(9600);
+  Serial.println("Hello! Timur");
+}
+void loop()
+{
+    if(Serial.available() > 0)
+    {
+      int value = Serial.read() - '0';
 
+      if(value >= 0 && value <= 5)
+      {
+        Serial.println("Число от 0 до 5 ");
+      }
+      else if(value > 5 && value <= 10)
+      {
+        Serial.println("Число от 6 до 10 ");
+      }
+      else
+      {
+        Serial.println("Введенное значение точно не от 0 до 10  ");
+      }
+    }
+}
+-----------------------------------------------------------------------------
+
+2--------------------------------------------------------------------------
+void setup()
+{
+  Serial.begin(9600);
+  Serial.println("Hello! Timur");
+}
+
+void loop()
+{
+    if(Serial.available() > 0)
+    {
+      int value = Serial.read() - '0';
+
+      switch(value)
+      {
+        case 1 : Serial.println("число 1 "); break;
+        case 2 : Serial.println("число 2 "); break;
+        case 3 : Serial.println("число 3 "); break;
+        case 4 : Serial.println("число 4 "); break;
+        case 5 : Serial.println("число 5 "); break;
+        default : Serial.println("число не от 1 до 5 !");
+
+      }
+    }
+}
+--------------------------------------------------------------------------
